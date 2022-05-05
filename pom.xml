@@ -31,6 +31,7 @@
         <java.version>1.8</java.version>
         <scala.version>2.12</scala.version>
         <flink.version>1.12.0</flink.version>
+        <slf4j.version>1.7.30</slf4j.version>
     </properties>
     <dependencies>
         <dependency>
@@ -235,6 +236,22 @@
             <version>1.2.17</version>
             <scope>runtime</scope>
         </dependency>
+<!-- 硅谷这块的日志包和我本地有冲突，找不到class，先不用了-->
+<!--        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>2.14.0</version>
+        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>

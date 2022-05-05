@@ -1,0 +1,4 @@
+bob, ./home, 1000L
+mary, ./cart?id=10, 2000L
+bob, ./prod, 3000L
+mary, ./detail?id=1, 4000L
