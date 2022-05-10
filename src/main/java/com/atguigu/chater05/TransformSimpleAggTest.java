@@ -28,16 +28,23 @@ public class TransformSimpleAggTest {
         );
 
         // 按键分组之后进行聚合,提取当前用户最后一次访问数据，<输入数据类型，key的类型>
-        KeyedStream<Event, String> keyedStream = stream.keyBy(new KeySelector<Event, String>() {
+        // 使用lambda表达式
+        KeyedStream<Event, String> keyedStream = stream.keyBy(data -> data.user);
+        KeyedStream<Event, String> keyedStream1 = stream.keyBy(new KeySelector<Event, String>() {
             @Override
             public String getKey(Event value) throws Exception {
                 return value.user;
             }
         });
+
         // Pojo类，聚合函数max 传字段名称
+        // max只计算指定字段的最大值，其他字段会保留最初第一个数据的值
         SingleOutputStreamOperator<Event> maxTime = keyedStream.max("timestamp");
         maxTime.print("max");
-        // maxBy，真正的取最新的一条数据，max只更新整条数据中的聚合的字段，其余字段值保持和第一条该分组的数据一致
+        // maxBy返回包含最大字段值的 整条 数据
+        SingleOutputStreamOperator<Event> maxByTime = keyedStream.maxBy("timestamp");
+        maxByTime.print("maxBy");
+
         env.execute();
     }
 }
