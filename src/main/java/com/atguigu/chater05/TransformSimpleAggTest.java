@@ -37,6 +37,7 @@ public class TransformSimpleAggTest {
         // Pojo类，聚合函数max 传字段名称
         SingleOutputStreamOperator<Event> maxTime = keyedStream.max("timestamp");
         maxTime.print("max");
+        // maxBy，真正的取最新的一条数据，max只更新整条数据中的聚合的字段，其余字段值保持和第一条该分组的数据一致
         env.execute();
     }
 }
