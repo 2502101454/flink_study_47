@@ -24,7 +24,8 @@ public class TransformReduceTest {
                 new Event("Alice", "./prod?id=100", 3000L),
                 new Event("Bob", "./home", 3100L),
                 new Event("Alice", "./profile", 3200L),
-                new Event("Bob", "./prod?id=1", 3300L)
+                new Event("Bob", "./prod?id=1", 3300L),
+                new Event("steven", "./home", 3300L)
         );
 
         SingleOutputStreamOperator<Tuple2<String, Long>> userOne = stream.map(data -> Tuple2.of(data.user, 1L))
