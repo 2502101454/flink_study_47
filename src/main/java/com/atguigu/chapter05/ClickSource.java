@@ -1,4 +1,4 @@
-package com.atguigu.chater05;
+package com.atguigu.chapter05;
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 

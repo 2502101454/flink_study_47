@@ -1,4 +1,4 @@
-package com.atguigu.chater05;
+package com.atguigu.chapter05;
 
 import java.sql.Timestamp;
 

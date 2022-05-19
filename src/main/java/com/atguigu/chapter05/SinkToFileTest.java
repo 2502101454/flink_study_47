@@ -1,7 +1,5 @@
-package com.atguigu.chater05;
+package com.atguigu.chapter05;
 
-import com.google.common.eventbus.DeadEvent;
-import jodd.datetime.TimeUtil;
 import org.apache.flink.api.common.serialization.SimpleStringEncoder;
 import org.apache.flink.core.fs.Path;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;

@@ -1,6 +1,5 @@
-package com.atguigu.chater05;
+package com.atguigu.chapter05;
 
-import org.apache.flink.api.common.typeutils.base.EnumSerializer;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 

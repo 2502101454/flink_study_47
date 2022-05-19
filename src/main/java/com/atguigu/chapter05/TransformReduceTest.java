@@ -1,6 +1,5 @@
-package com.atguigu.chater05;
+package com.atguigu.chapter05;
 
-import io.netty.handler.codec.http2.Http2Exception;
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.api.common.typeinfo.TypeHint;
 import org.apache.flink.api.java.tuple.Tuple2;
